@@ -11,9 +11,11 @@ canvas {
 
 @keyframes fadeIn {
   from {
+    top: -30vh;
     opacity: 0;
   }
   to {
+    top: 30vh;
     opacity: 1;
   }
 }
@@ -32,6 +34,7 @@ canvas {
   opacity: 0; /* Initially hidden */
   display: none; /* Initially not displayed */
   animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+  text-align: center;
 }
 
 #helpButton {
@@ -45,6 +48,7 @@ canvas {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
   z-index: 10;
 }
 
@@ -80,7 +84,6 @@ canvas {
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 18px;
-  text-align: center;
   z-index: 20;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;

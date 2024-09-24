@@ -1,4 +1,29 @@
-// script.js
+// Select the audio element
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+// Play the audio when the page loads
+window.addEventListener('load', () => {
+  backgroundMusic.play();
+});
+
+// Listen for keydown events
+document.addEventListener('keydown', (event) => {
+  if (event.code === 'KeyM') {
+    if (!backgroundMusic.paused) {
+      backgroundMusic.pause();
+    } else {
+      backgroundMusic.play();
+    }
+  }
+});
+
+// Existing code
+setTimeout(() => {
+  instructionsMenu.style.opacity = '1'; // Trigger fade-in
+}, 10); // Small delay to ensure display change is applied
+
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const instructionsMenu = document.getElementById('instructionsMenu');
   const closeButton = document.getElementById('closeButton');
@@ -41,7 +66,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         shapeDescription.style.opacity = '1'; // Trigger fade-in
       }, 10); // Small delay to ensure display change is applied
       setTimeout(() => {
-        shapeDescription.style.opacity = '0'; // Fade out after 3 seconds
+        shapeDescription.style.opacity = '1'; // Fade out after 3 seconds
         setTimeout(() => {
           shapeDescription.style.display = 'none'; // Hide after fade-out
         }, 500); // Match this duration with your CSS transition duration
@@ -57,7 +82,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       shapeDescription.style.opacity = '1';
     }, 10);
     setTimeout(() => {
-      shapeDescription.style.opacity = '0';
+      shapeDescription.style.opacity = '1';
       setTimeout(() => {
         shapeDescription.style.display = 'none';
       }, 500);
