@@ -1,0 +1,104 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "forma-djr-display", sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#instructionsMenu {
+  position: fixed;
+  left: 50vw;
+  top: 30vh;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 300px;
+  opacity: 0; /* Initially hidden */
+  display: none; /* Initially not displayed */
+  animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+}
+
+#helpButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+#helpButton:hover {
+  background-color: gray; /* Change color on hover */
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white; /* Set the color to white */
+  transition: transform 0.2s ease-in-out;
+}
+
+#closeButton:hover {
+  transform: rotate(90deg);
+  color: rgb(229, 229, 229); /* Slightly different color on hover */
+}
+
+#shapeDescription {
+  position: absolute;
+  height: fit-content;
+  left: 50vw;
+  top: 80vh;
+  transform: translateX(-50%); /* Center it horizontally */
+  background-color: rgba(0, 0, 0,); /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 20;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
